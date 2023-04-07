@@ -81,7 +81,7 @@ class _LoginScreenState extends State<_LoginScreen> {
                   children: [
                     LongButton(
                         onPressed: () => context.read<LoginCubit>().login(),
-                        label: 'Logheaza-te',
+                        label: 'Log in',
                         isLoading: state.isLoading),
                     TextButton(
                         onPressed: () {
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<_LoginScreen> {
                               .replace(const RegistrationRoute());
                         },
                         child: Text(
-                          "N-ai cont? Inregistreaza-te",
+                          "Don't have an account? Register",
                           style: theme.actionTextStyle,
                         ))
                   ],

@@ -119,14 +119,14 @@ class _RegistrationScreenState extends State<EmailRegistrationScreen> {
                     LongButton(
                         onPressed: () =>
                             context.read<RegistrationCubit>().register(),
-                        label: 'Inregistreaza-te',
+                        label: 'Register',
                         isLoading: state.status == RegistrationStatus.loading),
                     TextButton(
                         onPressed: () {
                           AutoRouter.of(context).replace(const LoginRoute());
                         },
                         child: Text(
-                          "Logheaza-te",
+                          "Log in",
                           style: theme.actionTextStyle,
                         ))
                   ],
