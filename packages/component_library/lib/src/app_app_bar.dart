@@ -3,13 +3,13 @@ import 'package:flutter/services.dart';
 
 import '../component_library.dart';
 
-class PietrockaAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showLeading;
   final Widget? leading;
   final List<Widget>? trailing;
   final Widget? title;
   final PreferredSizeWidget? bottom;
-  const PietrockaAppBar({
+  const CustomAppBar({
     Key? key,
     this.showLeading = true,
     this.leading,
@@ -18,8 +18,8 @@ class PietrockaAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.bottom,
   }) : super(key: key);
 
-  AppBar pietrockaAppBar({
-    required PietrockaThemeData theme,
+  AppBar theAppBar({
+    required AppThemeData theme,
   }) {
     return AppBar(
       systemOverlayStyle: SystemUiOverlayStyle.light,
@@ -27,7 +27,7 @@ class PietrockaAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: leading,
       centerTitle: true,
       title: title ??
-          PietrockaLogo(
+          AppLogo(
             color: theme.primaryColor,
           ),
       backgroundColor: Colors.transparent,
@@ -39,11 +39,10 @@ class PietrockaAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = PietrockaTheme.of(context);
-    return pietrockaAppBar(theme: theme);
+    final theme = AppTheme.of(context);
+    return theAppBar(theme: theme);
   }
 
   @override
-  Size get preferredSize =>
-      pietrockaAppBar(theme: LightPietrockaThemeData()).preferredSize;
+  Size get preferredSize => theAppBar(theme: LightAppThemeData()).preferredSize;
 }

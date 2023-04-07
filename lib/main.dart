@@ -23,15 +23,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _lightTheme = LightPietrockaThemeData();
-  final _darkTheme = DarkPietrockaThemeData();
+  final _lightTheme = LightAppThemeData();
+  final _darkTheme = DarkAppThemeData();
   final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
     final state = context.watch<AuthBloc>().state;
 
-    return PietrockaTheme(
+    return AppTheme(
       lightTheme: _lightTheme,
       darkTheme: _darkTheme,
       child: MaterialApp.router(

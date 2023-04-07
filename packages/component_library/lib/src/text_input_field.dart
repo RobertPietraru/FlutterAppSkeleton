@@ -32,7 +32,7 @@ class _TextInputFieldState extends State<TextInputField> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = PietrockaTheme.of(context);
+    final theme = AppTheme.of(context);
     return TextFormField(
         obscureText: isObscured,
         decoration: InputDecoration(

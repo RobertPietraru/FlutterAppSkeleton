@@ -50,9 +50,9 @@ class _RegistrationScreenState extends State<EmailRegistrationScreen> {
   final TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final theme = PietrockaTheme.of(context);
+    final theme = AppTheme.of(context);
     return Scaffold(
-      appBar: PietrockaAppBar(
+      appBar: CustomAppBar(
           leading: IconButton(
               onPressed: widget.onBackButton,
               icon: const Icon(Icons.arrow_back))),
@@ -72,9 +72,9 @@ class _RegistrationScreenState extends State<EmailRegistrationScreen> {
               children: [
                 Column(
                   children: [
-                    Text("Pietrocka Education", style: theme.titleTextStyle),
+                    Text("My app", style: theme.titleTextStyle),
                     Text(
-                      "Revolutionam educatia, dar noi chiar o facem",
+                      "We do something",
                       style: theme.subtitleTextStyle
                           .copyWith(color: theme.secondaryColor),
                       textAlign: TextAlign.center,

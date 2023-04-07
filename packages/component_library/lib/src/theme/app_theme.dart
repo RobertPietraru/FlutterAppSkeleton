@@ -1,8 +1,8 @@
 import 'package:component_library/component_library.dart';
 import 'package:flutter/material.dart';
 
-class PietrockaTheme extends InheritedWidget {
-  const PietrockaTheme({
+class AppTheme extends InheritedWidget {
+  const AppTheme({
     required Widget child,
     required this.lightTheme,
     required this.darkTheme,
@@ -12,24 +12,24 @@ class PietrockaTheme extends InheritedWidget {
           child: child,
         );
 
-  final PietrockaThemeData lightTheme;
-  final PietrockaThemeData darkTheme;
+  final AppThemeData lightTheme;
+  final AppThemeData darkTheme;
 
   @override
   bool updateShouldNotify(
-    PietrockaTheme oldWidget,
-  ) => oldWidget.lightTheme != lightTheme || oldWidget.darkTheme != darkTheme;
+    AppTheme oldWidget,
+  ) =>
+      oldWidget.lightTheme != lightTheme || oldWidget.darkTheme != darkTheme;
 
-  static PietrockaThemeData of(BuildContext context) {
+  static AppThemeData of(BuildContext context) {
     DeviceSize.init(context);
 
-    final PietrockaTheme? inheritedTheme =
-        context.dependOnInheritedWidgetOfExactType<PietrockaTheme>();
-    assert(inheritedTheme != null, 'No PietrockaTheme found in context');
+    final AppTheme? inheritedTheme =
+        context.dependOnInheritedWidgetOfExactType<AppTheme>();
+    assert(inheritedTheme != null, 'No AppTheme found in context');
     final currentBrightness = Theme.of(context).brightness;
     return currentBrightness == Brightness.dark
         ? inheritedTheme!.darkTheme
         : inheritedTheme!.lightTheme;
   }
 }
-

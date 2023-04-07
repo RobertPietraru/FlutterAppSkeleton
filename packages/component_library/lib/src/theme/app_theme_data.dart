@@ -7,7 +7,7 @@ const _dividerThemeData = DividerThemeData(
 
 // If the number of properties get too big, we can start grouping them in
 // classes like Flutter does with TextTheme, ButtonTheme, etc, inside ThemeData.
-abstract class PietrockaThemeData {
+abstract class AppThemeData {
   ThemeData materialThemeData(BuildContext context);
 
   final ThemeSpacing spacing = ThemeSpacing();
@@ -42,7 +42,7 @@ abstract class PietrockaThemeData {
   );
 }
 
-class LightPietrockaThemeData extends PietrockaThemeData {
+class LightAppThemeData extends AppThemeData {
   @override
   ThemeData materialThemeData(BuildContext context) => ThemeData(
         brightness: Brightness.light,
@@ -60,7 +60,7 @@ class LightPietrockaThemeData extends PietrockaThemeData {
   Color get secondaryColor => Colors.grey;
 }
 
-class DarkPietrockaThemeData extends PietrockaThemeData {
+class DarkAppThemeData extends AppThemeData {
   @override
   ThemeData materialThemeData(BuildContext context) => ThemeData(
       floatingActionButtonTheme: FloatingActionButtonThemeData(

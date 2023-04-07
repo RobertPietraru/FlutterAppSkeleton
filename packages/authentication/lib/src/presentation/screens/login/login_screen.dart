@@ -29,9 +29,9 @@ class _LoginScreenState extends State<_LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final theme = PietrockaTheme.of(context);
+    final theme = AppTheme.of(context);
     return Scaffold(
-      appBar: const PietrockaAppBar(),
+      appBar: const CustomAppBar(),
       body: BlocBuilder<LoginCubit, LoginState>(
         builder: (context, state) {
           return Padding(
@@ -43,9 +43,9 @@ class _LoginScreenState extends State<_LoginScreen> {
               children: [
                 Column(
                   children: [
-                    Text("Pietrocka Education", style: theme.titleTextStyle),
+                    Text("My app", style: theme.titleTextStyle),
                     Text(
-                      "Revolutionam educatia, dar noi chiar o facem",
+                      "We do something",
                       style: theme.subtitleTextStyle
                           .copyWith(color: theme.secondaryColor),
                       textAlign: TextAlign.center,

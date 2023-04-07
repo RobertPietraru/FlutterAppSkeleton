@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class PietrockaLogo extends StatelessWidget {
+class AppLogo extends StatelessWidget {
   final double size;
   final Color? color;
-  const PietrockaLogo({
+  const AppLogo({
     Key? key,
     this.size = 24,
     this.color,

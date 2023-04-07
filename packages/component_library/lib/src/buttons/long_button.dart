@@ -15,7 +15,7 @@ class LongButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = PietrockaTheme.of(context);
+    final theme = AppTheme.of(context);
     return SizedBox(
       width: 100.widthPercent,
       height: 55,
