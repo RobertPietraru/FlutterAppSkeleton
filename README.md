@@ -4,5 +4,6 @@ I'd say this is an acceptable approach for authentication as it only depends on 
 ## Getting Started
 1. Install Flutter
 2. Run flutter create .
-3. Do the FlutterFire setup
-4. Replace the firebase_options.dart file
+3. Run make get in bash (git bash on Windows)
+4. Do the FlutterFire setup (https://firebase.google.com/docs/flutter/setup?platform=ios#available-plugins)
+5. Replace the firebase_options.dart file
