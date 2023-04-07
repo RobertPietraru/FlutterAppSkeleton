@@ -39,7 +39,7 @@ class _MyAppState extends State<MyApp> {
           _appRouter,
           routes: (_) {
             if (state.userEntity == null) {
-              return [const AuthSplashRoute()];
+              return [const AuthRouter()];
             } else {
               return [const AuthenticatedRoute()];
             }
