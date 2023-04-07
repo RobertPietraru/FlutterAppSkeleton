@@ -4,26 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:skeleton/injection.dart';
 import 'package:routing/routing.dart';
-import 'package:skeleton/l10n/app_localizations.dart';
 import 'package:core/core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await inject();
 
-  runApp(const AuthGuard(child: PietrockaEducation()));
+  runApp(const AuthBlocWidget(child: MyApp()));
 }
 
-class PietrockaEducation extends StatefulWidget {
-  const PietrockaEducation({
+class MyApp extends StatefulWidget {
+  const MyApp({
     Key? key,
   }) : super(key: key);
 
   @override
-  _PietrockaEducationState createState() => _PietrockaEducationState();
+  _MyAppState createState() => _MyAppState();
 }
 
-class _PietrockaEducationState extends State<PietrockaEducation> {
+class _MyAppState extends State<MyApp> {
   final _lightTheme = LightPietrockaThemeData();
   final _darkTheme = DarkPietrockaThemeData();
   final _appRouter = AppRouter();
