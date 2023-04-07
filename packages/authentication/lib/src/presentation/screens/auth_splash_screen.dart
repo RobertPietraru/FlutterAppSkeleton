@@ -20,7 +20,7 @@ class AuthSplashScreen extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  "Pietrocka",
+                  "My App",
                   style: TextStyle(color: theme.primaryColor),
                 ),
               ],

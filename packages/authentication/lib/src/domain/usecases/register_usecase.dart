@@ -15,13 +15,12 @@ class RegisterUsecase extends UseCase<UserEntity, RegisterParams> {
 }
 
 class RegisterParams {
-  const RegisterParams(
-      {required this.email,
-      required this.password,
-      required this.name,
-      required this.roles});
+  const RegisterParams({
+    required this.email,
+    required this.password,
+    required this.name,
+  });
   final String email;
   final String password;
   final String name;
-  final Set<AccountType> roles;
 }

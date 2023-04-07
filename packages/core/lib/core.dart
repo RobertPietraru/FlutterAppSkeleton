@@ -11,7 +11,6 @@ export 'package:auto_route/auto_route.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'src/failure.dart';
 export 'src/usecase.dart';
-export 'src/entities/account_type.dart';
 
 // screens
 export 'src/screens/not_found_404.dart';

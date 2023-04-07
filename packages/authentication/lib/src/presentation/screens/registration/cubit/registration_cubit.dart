@@ -13,21 +13,10 @@ class RegistrationCubit extends Cubit<RegistrationState> {
   RegistrationCubit(this.registerUsecase, {required this.authBloc})
       : super(const RegistrationState(
           status: RegistrationStatus.init,
-          roles: {},
           email: Email.dirty(),
           password: Password.dirty(),
           name: Name.dirty(),
         ));
-  void toggleRole(AccountType role) {
-    Set<AccountType> roles = state.roles.toSet();
-    if (roles.contains(role)) {
-      roles.remove(role);
-    } else {
-      roles.add(role);
-    }
-    emit(state.copyWith(roles: roles));
-  }
-
   void onEmailChanged(String email) {
     final newEmail = Email.dirty(email);
     emit(state.copyWith(
@@ -72,7 +61,6 @@ class RegistrationCubit extends Cubit<RegistrationState> {
     emit(state.copyWith(status: RegistrationStatus.loading));
     final response = await registerUsecase.call(
       RegisterParams(
-        roles: state.roles,
         name: state.name.value,
         email: state.email.value,
         password: state.password.value,

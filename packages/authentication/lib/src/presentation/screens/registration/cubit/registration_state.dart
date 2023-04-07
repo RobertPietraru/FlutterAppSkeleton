@@ -4,7 +4,6 @@ enum RegistrationStatus { error, loading, successful, init }
 
 class RegistrationState extends Equatable {
   const RegistrationState({
-    required this.roles,
     required this.name,
     required this.email,
     required this.password,
@@ -17,10 +16,9 @@ class RegistrationState extends Equatable {
   final Name name;
   final RegistrationStatus status;
   final AuthFailure? failure;
-  final Set<AccountType> roles;
 
   @override
-  List<Object?> get props => [name, email, password, status, failure, ...roles];
+  List<Object?> get props => [name, email, password, status, failure, ];
 
   bool get isValid {
     return validationFailure == null;
@@ -65,7 +63,6 @@ class RegistrationState extends Equatable {
     Password? password,
     RegistrationStatus? status,
     AuthFailure? failure = AuthFailure.mock,
-    Set<AccountType>? roles,
   }) =>
       RegistrationState(
         name: name ?? this.name,
@@ -73,6 +70,5 @@ class RegistrationState extends Equatable {
         password: password ?? this.password,
         status: status ?? this.status,
         failure: failure == AuthFailure.mock ? this.failure : failure,
-        roles: roles ?? this.roles,
       );
 }
