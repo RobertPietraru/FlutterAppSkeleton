@@ -1,10 +1,15 @@
-import 'package:authentication/authentication.dart';
-import 'package:component_library/component_library.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:skeleton/injection.dart';
-import 'package:routing/routing.dart';
-import 'package:core/core.dart';
+
+import 'core/components/l10n/component_library_localizations.dart';
+import 'core/components/theme/app_theme.dart';
+import 'core/components/theme/app_theme_data.dart';
+import 'core/routing/app_router.gr.dart';
+import 'features/authentication/presentation/auth_bloc/auth_bloc.dart';
+import 'features/authentication/presentation/auth_guard.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
