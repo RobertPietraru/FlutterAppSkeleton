@@ -35,7 +35,6 @@ class AuthFirebaseDataSourceIMPL implements AuthRemoteDataSource {
       email: params.email,
       id: userId,
       name: params.name,
-      homeId: null,
     );
 
     await firestore

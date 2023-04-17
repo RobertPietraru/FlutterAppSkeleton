@@ -7,12 +7,10 @@ class UserDto extends UserEntity {
     required super.email,
     required super.id,
     required super.name,
-    required super.homeId,
   });
 
   factory UserDto.empty() {
     return const UserDto(
-      homeId: null,
       email: null,
       id: 'qweasadfjqwerupp',
       name: '%%%%%%%%',
@@ -21,7 +19,6 @@ class UserDto extends UserEntity {
 
   factory UserDto.fromSnapshot(DocumentSnapshot snapshot) {
     return UserDto(
-      homeId: snapshot['home_id'] as String?,
       id: snapshot.id,
       email: snapshot['email'] as String,
       name: snapshot['name'] as String,
@@ -32,12 +29,10 @@ class UserDto extends UserEntity {
         'id': id,
         'email': email,
         'name': name,
-        'home_id': homeId,
       };
 
   Map<String, dynamic> toSnapshotData() => {
         'email': email,
         'name': name,
-        'home_id': homeId,
       };
 }
