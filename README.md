@@ -5,7 +5,7 @@ I'd say this is an acceptable approach for authentication as it only depends on 
 1. Install Flutter
 2. Clone the repository and rename the folder from AuthenticationSkeleton to something without uppercases
 3. Replace all occurences of the word "skeleton" with the name of your project
-3. Run flutter create .
+3. Run flutter create .  (make sure the folder you're working in has no capital letters. Rename after cloning or clone into the proper folder)
 4. Run make get in bash (git bash on Windows)
 5. Do the FlutterFire setup (https://firebase.google.com/docs/flutter/setup?platform=ios#available-plugins)
 6. Replace the firebase_options.dart file
