@@ -28,6 +28,9 @@ Future things to add (not in any order, but in groups):
 - Bug reporting and feedback system
 - Account deletion, data safety and stuff
 - Performance monitoring, Crashlytics
+- Payment system, different plans 
+- Roles (admin, and stuff)
+
 
 - A consistent Presentation layer structure.
 - A consistent Widget reusability.
