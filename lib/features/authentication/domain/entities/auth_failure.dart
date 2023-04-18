@@ -1,4 +1,4 @@
-import '../../../../core/objects/failure.dart';
+import '../../../../core/classes/failure.dart';
 
 enum AuthFailureType {
   badName,

@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:skeleton/injection.dart';
 
-import 'core/components/l10n/component_library_localizations.dart';
 import 'core/components/theme/app_theme.dart';
 import 'core/components/theme/app_theme_data.dart';
 import 'core/routing/app_router.gr.dart';
@@ -63,7 +62,6 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: const [
           GlobalCupertinoLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
-          ComponentLibraryLocalizations.delegate,
         ],
       ),
     );

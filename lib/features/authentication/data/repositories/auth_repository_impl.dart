@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import '../../../../core/objects/usecase.dart';
+import '../../../../core/classes/usecase.dart';
 import '../../domain/auth_domain.dart';
 import '../../domain/entities/auth_failure.dart';
 import '../datasource/auth_remote_data_source.dart';

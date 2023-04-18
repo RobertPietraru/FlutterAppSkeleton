@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/objects/usecase.dart';
+import '../../../../core/classes/usecase.dart';
 import '../../domain/auth_domain.dart';
 import '../../domain/entities/auth_failure.dart';
 
