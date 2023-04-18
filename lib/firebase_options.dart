@@ -17,15 +17,27 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macOS - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -34,7 +46,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+          'you can reconfigthrow ure this by running the FlutterFire CLI again.',
         );
       default:
         throw UnsupportedError(
@@ -42,44 +54,4 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBDObcs3GlQjsvW_sDBwYD-C_vUrv7siWQ',
-    appId: '1:40369619488:web:98b99bee44454d09e0f245',
-    messagingSenderId: '40369619488',
-    projectId: 'skeleton-a3bd2',
-    authDomain: 'skeleton-a3bd2.firebaseapp.com',
-    storageBucket: 'skeleton-a3bd2.appspot.com',
-    measurementId: 'G-R8414YD0JP',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDtA1oWFif2z4fkbgNBtdWw9JXI5YmUddM',
-    appId: '1:40369619488:android:2edcf1f76cbc5466e0f245',
-    messagingSenderId: '40369619488',
-    projectId: 'skeleton-a3bd2',
-    storageBucket: 'skeleton-a3bd2.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCyChretJh2zeOMO7FXwyMa-QPRj0Hkdsg',
-    appId: '1:40369619488:ios:972d15934cf0df80e0f245',
-    messagingSenderId: '40369619488',
-    projectId: 'skeleton-a3bd2',
-    storageBucket: 'skeleton-a3bd2.appspot.com',
-    iosClientId:
-        '40369619488-4a1j72fsmoo14vkqo68kl0j5tbndirrg.apps.googleusercontent.com',
-    iosBundleId: 'com.example.skeleton',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCyChretJh2zeOMO7FXwyMa-QPRj0Hkdsg',
-    appId: '1:40369619488:ios:972d15934cf0df80e0f245',
-    messagingSenderId: '40369619488',
-    projectId: 'skeleton-a3bd2',
-    storageBucket: 'skeleton-a3bd2.appspot.com',
-    iosClientId:
-        '40369619488-4a1j72fsmoo14vkqo68kl0j5tbndirrg.apps.googleusercontent.com',
-    iosBundleId: 'com.example.skeleton',
-  );
 }
