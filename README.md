@@ -11,47 +11,51 @@ I'd say this is an acceptable approach for authentication as it only depends on 
 6. Replace the firebase_options.dart file
 
 
-Future things to add (not in any order, but in groups):
-- Different modes (Production, Development)
-- Proper localization
-- Notifications (reminders and notifiers for actions)
-- Deep linking
-- Authentication with Google, Twitter and all That 
-- Better authentication checking. Technically, it should check if the user is authenticated after every operation involving in the backend
-- Testing, CI/CD
-- Best practices in general (Clean Architecture, clean code, etc)
-- Improved theme system, user settings
-- Improved error system. Proper error messaging. Decoupling from Firebase. 
-- Logging (both in production and in development)
-- Caching, cache validation
-- Sockets, or a way to do realtime stuff without Firebase
-- Bug reporting and feedback system
-- Account deletion, data safety and stuff
-- Performance monitoring, Crashlytics
-- Payment system, different plans 
-- Roles (admin, and stuff)
+Near Future:
+
+Safety:
+- (❌) Spam protection (action limiting, blocking buttons after first click) - Finding a proper structure for doing that at scale
+- (❌) User authorization check on every interaction with the backend 
+- (❌) Local data deletion
+- (❌) Encryption
+
+Features:
+- (❌) Caching
+- (❌) Notifications (reminders and notifiers for actions)
+- (❌) Authentication with Google, Twitter and apple
+- (❌) Localization
+- (❌) Deep linking and/or dynamic linking
+- (❌) Account recovery
+- (❌) Realtime without Firebase
+- (❌) Roles (admin, user. Separation of UI in short)
+
+Stability:
+- (❌) Error handling and presentation of errors
+- (❌) A consistent Presentation layer structure.
+- (❌) A consistent Widget reusability.
+- (❌) A consistent state management structure.
+- (❌) Form validation
+- (❌) Routing, navigation and redirecting
+- (❌) Working with URLs and stuff
+- (❌) Responsive UI
+- (❌) Animations (loading for example)
+- (❌) Offline mode
+
+Development experience:
+- (❌) Best practices in general (Clean Architecture, clean code, etc)
+- (❌) Different modes (Production, Development)
+- (❌) Performance monitoring, Crashlytics
+- (❌) Testing
+- (❌) CI/CD
+- (❌) Logging (both in production and in development)
+- (❌) Bug reporting
+- (❌) Admin dashboard, statistics
 
 
-- A consistent Presentation layer structure.
-- A consistent Widget reusability.
-- A consistent state management structure.
-- A consistent way of handling form and form validation.
-- Better and consistent routing, navigation and redirecting
-- Working with URLs and stuff
-- Webviews
-- Responsive UI
-- Maybe splitting the code into packages.
-- Proper animations for loading and things like that.
-- Offline mode
-- Admin dashboard, statistics
-- Improved way to work with files
 
-
-
-Nice to have:
-- Easy way to switch between modes
-- A Rust based cli for creating the app (the developer would select what features to add to the app)
-- more features (chat, search with multiple services, etc)
-- Almost automatic setup
-- Documentation
-- Automatic deployment
+Long term:
+- (❌) Easy way to switch between modes
+- (❌) A Create-Next-App type CLI for setting up the app. With different settings and options for features
+- (❌) Automatic setup for template
+- (❌) Documentation
+- (❌) Payment system, different plans 
