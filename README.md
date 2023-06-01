@@ -1,6 +1,5 @@
 # skeleton
-A skeleton app, or a template for Flutter Authentication with Bloc and Clean Architecture. 
-I'd say this is an acceptable approach for authentication as it only depends on firebase in the Data layer.
+The purpose of this app is to create a template for future flutter development which already has a bunch of features implemented
 ## Getting Started
 1. Install Flutter
 2. Clone the repository and rename the folder from AuthenticationSkeleton to something without uppercases
